@@ -1,38 +1,111 @@
-.App {
-  text-align: center;
+html{
+    width: 100%;
+    height:100%;
+
+}
+body{
+    width: 100%;
+    height: 100%;
+}
+#root{
+    width: 100%;
+    height: 100%;
+}
+.AppWrap{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: absolute;
+    top:0;
+    right:0;
+}
+*{
+    padding: 0 0;
+    margin: 0;
+    border: 0;
+    font-family: 'Noto Sans', sans-serif;
+}
+.app{
+    padding:10px;
+    max-width: 350px;
+    vertical-align: middle;
+    display: inline-block;
+    min-width: 225px;
+    width:30%;
+    background-color: white;
+    box-shadow: lightgray 5px 5px 21px;
+    border-radius: 20px;
+}
+.blank{
+    width:0;
+    content: '';
+    height:100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+.buttonWrap {
+    min-width: 225px;
+    display: flex;
+    flex-wrap: wrap;
+    width:100%;
+}
+.button {
+    position: relative;
+    width:22%;
+    text-align: center;
+    cursor: pointer;
+    background-color: whitesmoke;
+    border-radius: 20%;
+    margin:0px 8px 8px 0px;
+    -ms-user-select: none;
+    -moz-user-select: -moz-none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+    font-weight: 600;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.button span{
+position: absolute;
+top: 50%;
+left: 50%;
+transform:translate(-50%,-50%);
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.button:before{
+    content: "";
+    display: block;
+    padding-top: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+
+.button:nth-child(1),
+.button:nth-child(2),
+.button:nth-child(3),
+.button:nth-child(4n) {
+    background-color: rgb(231, 243, 221);
+    color:rgb(104, 143, 71);
+}
+.button:last-child {
+    background-color: rgb(255, 195, 195);
+    color: rgb(228, 80, 80);
 }
 
-.App-link {
-  color: #61dafb;
+.button:nth-child(4n){
+  margin-right:0px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.result{
+    text-align: right;
+    font-size: 70px;
+    color:#797676;
+    position:relative;
+}
+.operator{
+    position: absolute;
+    top:20px;
+    left:20px;
+    font-size:40px;
 }

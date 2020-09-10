@@ -1,14 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Display extends Component {
-
-  render() {
+function Display(props) {
     return (
-      <div>
-        <div class="display">{this.state.operator}{this.state.result}</div>  
-      </div>
-    );
-  }
+        <div class="display">
+            <div class="result" >
+                <span class="operator">{props.operator}</span>
+                {props.result}</div>
+        </div>
+    )
 }
 
 export default Display;
